@@ -15,8 +15,8 @@ Realizar 3 unit tests por cada uno de los siguientes requerimientos para una lis
 
 ## Install
 
-    $ git clone https://github.com/YOUR_USERNAME/PROJECT_TITLE
-    $ cd PROJECT_TITLE
+    $ git clone https://github.com/jjnorris31/test-driven.git
+    $ cd test-driven
     $ npm install
 
 ## Running the tests
