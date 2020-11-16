@@ -1,11 +1,9 @@
 import {List} from "../src/List";
 import {assert} from 'chai'
-import {expect} from 'chai'
-
 
 describe('List', () => {
 
-    var list;
+    let list;
 
     beforeEach(() => {
         list = new List();
@@ -18,7 +16,7 @@ describe('List', () => {
     it('should add an item to the list', () => {
         list.add('dog');
         assert(list.indexOf('dog') === 0, 'the item was not added successful');
-    });
+    })
 
     it('should return the size of the list after adding it', () => {
         list.add('dog');
@@ -45,12 +43,19 @@ describe('List', () => {
 
     it('should get an item by index', () => {
         list.add('dog');
+        list.add('cat');
+        list.add('elephant');
         assert(list.get(0) === 'dog', 'the item returned it is not correct');
+        assert(list.get(1) === 'cat', 'the item returned it is not correct');
+        assert(list.get(2) === 'elephant', 'the item returned it is not correct');
     });
 
     it('should remove an item by index', () => {
         list.add('dog');
+        list.add('cat');
+        list.add('elephant');
         assert(list.remove(0) === 'dog', 'the deletion was not done successful');
+        assert(list.indexOf('dog') === -1, 'the deletion was not done successful');
     });
 
 
